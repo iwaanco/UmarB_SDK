@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script id="umarb" type="module" src="/main.js"></script> -->
+    <!-- load file script always on top -->
+</head>
+
+<body>
+
+    Advanced Usage
+
+    Extending Built-ins: You can extend built-in JavaScript objects like Array, Map, or Date to add custom
+    functionality.
+    Static Inheritance: Static methods are also inherited. If the parent has a static method, it can be called directly
+    on the child class.
+    Mix-ins: Since JavaScript does not support multiple inheritance, you can use functions that return classes (mix-ins)
+    to combine features from multiple sources.
+
+    <p>Hello, click button your balance</p>
+    <div id="btnbal"></div>
+    <div id="umarbforms">
+
+    </div>
+
+</body>
+<!-- write script always on bottom -->
+<script type="module">
+    import UmarB_SDK from '/main.js';
+    const umarBSdk = new UmarB_SDK({
+        ApiUrl: "http://localhost:3001/",
+        ClientID: "62f398f3-4233-4e5b-85ce-ed915a6e2516",
+        SecretKey: "62f398f3-4233-4e5b-85ce-ed915a6e2516",
+        CheckBalanceBtnAreaId: 'btnbal',
+        FormLoadAreaId: 'umarbforms',
+    });
+    umarBSdk.init();
+</script>
+
+
+</html>
