@@ -3,3 +3,4 @@ declare global {
         UmarB_SDK: any;
     }
 }
+export = UmarB_SDK;
