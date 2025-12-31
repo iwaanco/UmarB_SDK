@@ -13,7 +13,7 @@ export class HttpRequest {
       basicAuth = true,
       responseType = 'Object',
       init = false,
-      externalUrl = false
+      externalUrl = false,
     } = prop;
     if (externalUrl) {
       basicAuth = false;

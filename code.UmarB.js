@@ -20,14 +20,26 @@ export class Code_UmarB {
             }.bind(this))
         }
     }
-    formOpen(element) {
-        element.style.display = "block";
-    }
-    formClose(element) {
-        element.style.display = "none";
+    formSwitch(element) {
+        if (element.style.display == "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
     }
     changeForm(iframe, filename) {
 
+    }
+    async getLocalFile(url, addElement) {
+        let data2 = await this.http.httpRequest({
+            method: 'get',
+            url: url,
+            externalUrl: true,
+            responseType: 'html'
+        });
+        console.log("hello", data2);
+        addElement.innerHTML = data2;
+        //return data2.data;
     }
 
 }

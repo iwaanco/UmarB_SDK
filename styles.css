@@ -82,9 +82,6 @@
      background: #fd8686;
      border: 0;
      color: white;
-     border-radius: 5px 6px 5px 5px;
-     padding: 5px 10px 10px 10px;
-     position: absolute;
-     margin: -47px 29px 20px 59px;
-     height: 28px;
+     padding: 7px 10px 7px 10px;
+     margin-left: 23px;
  }
