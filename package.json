@@ -1,0 +1,30 @@
+{
+  "name": "umarb_sdk",
+  "version": "1.0.0",
+  "description": "e wallet",
+  "keywords": [
+    "halal",
+    "e",
+    "wallet",
+    "no",
+    "interest"
+  ],
+  "homepage": "https://github.com/iwaanco/UmarB_SDK#readme",
+  "bugs": {
+    "url": "https://github.com/iwaanco/UmarB_SDK/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwaanco/UmarB_SDK.git"
+  },
+  "license": "ISC",
+  "author": "Iwaan",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
