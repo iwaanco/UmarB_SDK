@@ -34,7 +34,8 @@ export default class UmarB_SDK {
             let elm = this.visualUmarBSDK.createBtn();
             this.codeUmarB.cheakBalance(elm);
         }
-        this.visualUmarBSDK.createLoginForm();
+        this.visualUmarBSDK.loadPage('./loginForm.html');
+        this.visualUmarBSDK.setEventsLoginPage();
     }
 }
 

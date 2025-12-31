@@ -31,7 +31,7 @@ export class Visual_UmarB_SDK {
             this.rootElm.append(css);
         }
     }
-    createLoginForm() {
+    loadPage(page) {
         try {
             let iframe = document.createElement('div');
             iframe.style.width = "325px";
@@ -40,12 +40,11 @@ export class Visual_UmarB_SDK {
             // rootElm.width = "350px";
             // rootElm.height = "500px";
             if (this.rootElm) {
-                this.code_UmarB.getLocalFile('/createForm_3.html', iframe);
+                this.code_UmarB.getLocalFile(page, iframe);
+                this.addCss();
+                this.rootElm.innerHTML = '';
                 this.addCss();
                 this.rootElm.appendChild(iframe);
-                setTimeout(function () {
-                    console.log("yes", this.rootElm.querySelector('input'))
-                }.bind(this), 6000)
                 return iframe;
             } else {
                 console.warn("FormLoadAreaId element not found");
@@ -55,6 +54,37 @@ export class Visual_UmarB_SDK {
             console.log(error);
             return null;
         }
+    }
+    setEventsLoginPage() {
+        setTimeout(function () {
+            let btnCreate = this.rootElm.querySelector("#createAccount_UmarB_1");
+            btnCreate.addEventListener("click", function () {
+                this.loadPage('./createForm_1.html');
+                setTimeout(function () {
+                    let nextBtCreate2 = this.rootElm.querySelector("#createAccount_UmarB_2");
+                    nextBtCreate2.addEventListener("click", function () {
+                        this.loadPage('./createForm_2.html');
+                    }.bind(this), 1500)
+                    //load
+                    setTimeout(function () {
+                        let nextBtCreate3 = this.rootElm.querySelector("#createAccount_UmarB_3");
+                        nextBtCreate3.addEventListener("click", function () {
+                            this.loadPage('./createForm_3.html');
+                        }.bind(this));
+                    }.bind(this), 1500)
+
+                }.bind(this), 1500);
+
+            }.bind(this));
+
+            let forgotBtn = this.rootElm.querySelector("#forgotPassword_UmarB")
+            forgotBtn.addEventListener("click", function () {
+                this.loadPage('./forgotPasswordForm.html');
+                //let elm = this.rootElm.querySelector("#UmarB_login_form");
+                //elm.style.display = "none";
+            }.bind(this));
+        }.bind(this), 2000)
+
     }
     CreateResgister() {
 

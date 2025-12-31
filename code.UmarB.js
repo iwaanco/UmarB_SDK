@@ -27,9 +27,6 @@ export class Code_UmarB {
             element.style.display = "none";
         }
     }
-    changeForm(iframe, filename) {
-
-    }
     async getLocalFile(url, addElement) {
         let data2 = await this.http.httpRequest({
             method: 'get',
@@ -41,5 +38,6 @@ export class Code_UmarB {
         addElement.innerHTML = data2;
         //return data2.data;
     }
+
 
 }

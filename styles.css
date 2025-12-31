@@ -8,7 +8,7 @@
 
  html,
  body {
-     overflow: hidden;
+     /* overflow: hidden; */
      /* Hide both horizontal and vertical scrollbars and disable scrolling */
      height: 100%;
      /* Ensure the body and html take the full height */
